@@ -20,17 +20,14 @@ from django import VERSION
 
 from django.db import models
 from django.utils.text import capfirst
-from django.utils.encoding import python_2_unicode_compatible
 from django.core import exceptions
 
 from ..forms.fields import MultiSelectFormField, MinChoicesValidator, MaxChoicesValidator
 from ..utils import get_max_length
 from ..validators import MaxValueMultiFieldValidator
 
-if sys.version_info < (3,):
-    string_type = unicode  # noqa: F821
-else:
-    string_type = str
+
+string_type = str
 
 # Code from six egg https://bitbucket.org/gutworth/six/src/a3641cb211cc360848f1e2dd92e9ae6cd1de55dd/six.py?at=default
 
@@ -47,7 +44,6 @@ def add_metaclass(metaclass):
     return wrapper
 
 
-@python_2_unicode_compatible
 class MSFList(list):
 
     def __init__(self, choices, *args, **kwargs):

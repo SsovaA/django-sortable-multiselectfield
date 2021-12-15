@@ -1,13 +1,11 @@
 django-sortable-multiselectfield
 =======================
 
-Originally forked from: https://github.com/goinnn/django-multiselectfield
+Originally forked from: https://github.com/goinnn/django-multiselectfield && https://github.com/kunalgrover05/django-sortable-multiselectfield
 
 A new model field and form field. With this you can get a multiple select from a choices. Stores to the database as a CharField of comma-separated values. The form field allows sorting of the selected choices. The selected choices are shown at top in the order they were selected.
 
-Supported Python versions: 2.6, 2.7, 3.3+
-
-Supported Django versions: 1.4-1.11+
+Supported Python versions: Only 3+
 
 Sorting behavior
 ---------------
@@ -24,7 +22,7 @@ Install with pip
 
 .. code-block:: bash
 
-    $ pip install git+https://github.com/kunalgrover05/django-multiselectfield
+    $ pip install git+https://github.com/SsovaA/django-sortable-multiselectfield
 
 Configure your models.py
 ------------------------
