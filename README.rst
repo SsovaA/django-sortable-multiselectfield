@@ -122,14 +122,3 @@ All tests pass on Django 1.4, 1.5, and 1.8+, so if you can, use a modern version
 
    See `issue #40 <https://github.com/goinnn/django-multiselectfield/issues/40>`_ for discussion about this bug.
 
-
-Example project
-===============
-
-There is a fully configured example project in the `example directory <https://github.com/goinnn/django-multiselectfield/tree/master/example/>`_. You can run it as usual:
-
-.. code-block:: bash
-
-    python manage.py migrate  # or python manage.py syncdb --noinput
-    python manage.py loaddata app_data
-    python manage.py runserver
