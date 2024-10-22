@@ -16,7 +16,7 @@
 import sys
 from django import forms
 from django.forms.widgets import ChoiceWidget, CheckboxSelectMultiple
-from django.utils.encoding import force_str
+from django.utils.encoding import force_text
 
 from ..utils import get_max_length
 from ..validators import MaxValueMultiFieldValidator, MinChoicesValidator, MaxChoicesValidator
@@ -87,8 +87,8 @@ class MultiSelectFormField(forms.MultipleChoiceField):
         if len(initial) != len(data):
             return True
 
-        initial_list = [force_str(value) for value in initial]
-        data_list = [force_str(value) for value in data]
+        initial_list = [force_text(value) for value in initial]
+        data_list = [force_text(value) for value in data]
 
         return initial_list != data_list
 
